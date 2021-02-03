@@ -11,12 +11,27 @@ namespace DataAccess.Concrete.InMemory
     {
         //Naming Convention
         List<Car> _cars;
+        List<Brand> _brand;
+        List<Color> _color;
         public InMemoryCarDal()
         {
             _cars = new List<Car> {
                 new Car{Id=1,BrandId=1,ColorId=3,ModelYear=2011,DailyPrice=200,Description="Ford Focus"},
                 new Car{Id=2,BrandId=2,ColorId=1,ModelYear=2000,DailyPrice=100,Description="Volkswagen Bora"},
                 new Car{Id=3,BrandId=3,ColorId=3,ModelYear=2004,DailyPrice=50,Description="Fiat Albea"}
+
+            };
+            _brand = new List<Brand>
+            {
+                new Brand{BrandId = 1,BrandName = "Ford"},
+                new Brand{BrandId = 2,BrandName = "Volkwagen"},
+                new Brand{BrandId = 3,BrandName = "Fiat"}
+            };
+            _color = new List<Color>
+            {
+                new Color{ColorId = 1,ColorName = "Beyaz"},
+                new Color{ColorId = 2,ColorName = "Siyah"},
+                new Color{ColorId = 3,ColorName = "Gri"}
 
             };
         }
